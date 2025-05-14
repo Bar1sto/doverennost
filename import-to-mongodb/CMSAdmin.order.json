@@ -1,0 +1,135 @@
+[{
+  "_id": {
+    "$oid": "6809596294aee55e128eb1ac"
+  },
+  "order_number": "M-333",
+  "organization": "ООО ЮГ-СТРОЙ",
+  "supplier": "ООО \"Транзит\"",
+  "corresponding_account": "120220204848",
+  "document_number": "1337",
+  "issue_date": {
+    "day": "02",
+    "month": "04",
+    "year": "2005"
+  },
+  "operation_type": "13549",
+  "material_values": [
+    {
+      "name": "Кирпич облицовочный Бостон РФ, 1 NF (уп/448) Славянский",
+      "unit": "шт",
+      "quantity": "100",
+      "price": "200",
+      "sum": "20000.00"
+    },
+    {
+      "name": "Цемент",
+      "unit": "м",
+      "quantity": "50",
+      "price": "502",
+      "sum": "25100.00"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68096e76695b32f734c4084d"
+  },
+  "organization": "ООО \"МЕГАБОЛЛС\"",
+  "order_number": "R-123",
+  "supplier": "ООО ЮГ-СТРОЙ",
+  "corresponding_account": "321",
+  "document_number": "123",
+  "issue_date": {
+    "day": "12",
+    "month": "12",
+    "year": "2000"
+  },
+  "operation_type": "321",
+  "material_values": [
+    {
+      "name": "Кирпич облицовочный Бостон РФ, 1 NF (уп/448) Славянский",
+      "unit": "компл",
+      "quantity": "10",
+      "price": "134",
+      "sum": "1340.00"
+    },
+    {
+      "name": "Кирпичи",
+      "unit": "кг",
+      "quantity": "14",
+      "price": "629",
+      "sum": "8806.00"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68097424695b32f734c4084e"
+  },
+  "organization": "ООО ЮГ-СТРОЙ",
+  "order_number": "R-34",
+  "supplier": "ООО \"МЕГАБОЛЛС\"",
+  "corresponding_account": "jjj",
+  "document_number": "hhh",
+  "issue_date": {
+    "day": "10",
+    "month": "10",
+    "year": "2010"
+  },
+  "operation_type": "ggg",
+  "material_values": [
+    {
+      "name": "Кирпич облицовочный Бостон РФ, 1 NF (уп/448) Славянский",
+      "unit": "кг",
+      "quantity": "123",
+      "price": "15056",
+      "sum": "510"
+    },
+    {
+      "name": "Цемент",
+      "unit": "шт",
+      "quantity": "321",
+      "price": "765",
+      "sum": "245565.00"
+    },
+    {
+      "name": "Кирпич облицовочный Бостон РФ, 1 NF (уп/448) Славянский",
+      "unit": "л",
+      "quantity": "435",
+      "price": "567",
+      "sum": "789"
+    },
+    {
+      "name": "Цемент",
+      "unit": "м",
+      "quantity": "5467",
+      "price": "789",
+      "sum": "879"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68097f51f209fe8a58950685"
+  },
+  "organization": "ООО \"Транзит\"",
+  "order_number": "67657",
+  "supplier": "ООО ЮГ-СТРОЙ",
+  "corresponding_account": "654765740",
+  "document_number": "234",
+  "issue_date": {
+    "day": "15",
+    "month": "12",
+    "year": "2024"
+  },
+  "operation_type": "Первая",
+  "material_values": [
+    {
+      "name": "Кирпич облицовочный Бостон РФ, 1 NF (уп/448) Славянский",
+      "unit": "шт",
+      "quantity": "120",
+      "price": "400",
+      "sum": "48000.00"
+    }
+  ]
+}]

@@ -1,0 +1,81 @@
+[{
+  "_id": {
+    "$oid": "67a479e39ec1ad13085ae532"
+  },
+  "home_org": "ООО \"Крапива\"",
+  "num_dover": "R333-44/2",
+  "issue_with": [
+    {
+      "day": "02",
+      "month": "04",
+      "year": "2000"
+    }
+  ],
+  "issue_for": [
+    {
+      "day": "01",
+      "month": "01",
+      "year": "2002"
+    }
+  ],
+  "consumer_org": "ООО ЮГ-СТРОЙ",
+  "payer_org": "ООО \"Крапива\"",
+  "issue_from": [
+    {
+      "position": "Начальник",
+      "fio_id": "67dbe2d1a7f2566f99218224"
+    }
+  ],
+  "get_from_org": "ООО \"Крапива\"",
+  "num_doc": "M-333",
+  "table": [
+    {
+      "material_value": "Кирпич облицовочный Бостон РФ, 1 NF (уп/448) Славянский",
+      "count": "2"
+    },
+    {
+      "material_value": "Цемент",
+      "count": "1"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67dbe338a7f2566f99218226"
+  },
+  "num_dover": "R333-44/1",
+  "home_org": "ООО \"Крапива\"",
+  "issue_with": [
+    {
+      "day": "13",
+      "month": "05",
+      "year": "2000"
+    }
+  ],
+  "issue_for": [
+    {
+      "day": "14",
+      "month": "09",
+      "year": "2021"
+    }
+  ],
+  "consumer_org": "ООО \"Крапива\"",
+  "payer_org": "ООО ЮГ-СТРОЙ",
+  "issue_from": [
+    {
+      "position": "Директор отделения",
+      "fio_id": "67dbe2d1a7f2566f99218224"
+    }
+  ],
+  "get_from_org": "ООО \"Крапива\"",
+  "table": [
+    {
+      "material_value": "Кирпич облицовочный Бостон РФ, 1 NF (уп/448) Славянский",
+      "count": "3"
+    },
+    {
+      "material_value": "Цемент",
+      "count": "1"
+    }
+  ]
+}]

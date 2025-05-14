@@ -1,0 +1,2402 @@
+body{
+    padding:0;
+    margin:0;
+}
+
+p{
+    margin:0;
+}
+
+input{
+    border:0;
+}
+
+body main{
+    display:flex;
+    position:relative;
+    width:100%;
+    min-height:2000px;
+    background-color:#0b2734;
+}
+
+/*------------------------------------------->
+<!------------------------------------------->
+<!----------------Шапка сайта---------------->
+<!------------------------------------------->
+<!-------------------------------------------*/
+header{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:100px;
+    background-color:#0e1f27;
+}
+
+header .header_content{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width:90%; 
+}
+
+header .header_content .header_time{
+    color:rgb(240,240,240);
+    font-size:25px;
+    font-weight:900;
+    letter-spacing:2px;
+}
+
+header .header_block .header_block-p1,.header_block-p2{
+    color:rgb(255,255,255);
+    font-size:15px;
+    font-weight:600;
+    letter-spacing:1px;
+    color:gray;
+}
+
+header .header_block .header_block-p1{
+    font-size:35px;
+    line-height: 35px;
+    color:rgb(240,240,240);
+}
+
+header .header_block .header_block-p1 span{
+    color:rgb(230,0,0);
+}
+
+/*-------------------------------------------------->
+<!-------------------------------------------------->
+<!----------------Боковое меню сайта---------------->
+<!-------------------------------------------------->
+<!--------------------------------------------------*/
+main .main_menu{
+    position:absolute;
+    left:-15%;
+    top:0;
+    width:20%;
+    height:100%;
+    background-color:#0e1f27;
+    box-shadow: inset 0px 2px 0px rgba(255,255,255,0.1);
+    transition:1s;
+}
+
+/*-----------Меню бургер-----------*/
+main .main_burger{
+    display:flex;
+    align-items: center;
+    position: absolute;
+    width:35px;
+    height:25px;
+    right:5%;
+    top:2%;
+    cursor: pointer;
+}
+
+main .main_burger .main_burger-content{
+    width:100%;
+    height:2px;
+    background-color:rgb(240,240,240);
+    transition:1s;
+}
+
+main .main_burger.active .main_burger-content{
+    transition:1s;
+    display: none;
+}
+
+
+main .main_burger.active .main_burger-content{
+    opacity:1;
+}
+
+/* Стили для основного пункта меню "Документы" */
+main .main_menu .main_menu_block .main_menu-documents {
+    width:100%;
+    text-align:left;
+    font-size:20px;
+    line-height: 40px;
+    letter-spacing: 3px;
+    font-weight:700;
+    color:gray;
+    background-color:rgb(18, 18, 18);
+    border-top:1px solid rgba(240,240,240,0.3);
+    border-bottom:1px solid rgba(240,240,240,0.3);
+}
+
+main .main_menu .main_menu_block .main_menu-documents.active {
+    color:white;
+}
+
+main .main_menu .main_menu_block .main_menu-documents:hover {
+    cursor:pointer;
+    color:rgb(240,240,240);
+}
+
+main .main_menu .main_menu_block .main_menu-documents span {
+    position:relative;
+    margin-left:calc(50% - 65px);
+}
+
+main .main_menu .main_menu_block .main_menu-documents span::before {
+    content:'';
+    position:absolute;
+    margin-left:-30px;
+    top:calc(50% - 10px);
+    width:20px;
+    height:20px;
+    background:url(img/main_menu-documents.png) no-repeat;
+    background-size:contain;
+    filter:brightness(0.5);
+}
+
+/* Стили для подпунктов меню "Документы" */
+main .main_menu .main_menu_block .main_menu-documents_block {
+    width:100%;
+}
+
+/* main .main_menu .main_menu_block .main_menu-documents_block .individuals, 
+main .main_menu .main_menu_block .main_menu-documents_block .organizations, 
+main .main_menu .main_menu_block .main_menu-documents_block .items {
+    background-color:rgb(0,18,18);
+} */
+
+main .main_menu .main_menu_block .main_menu-documents_block .individuals.active, 
+main .main_menu .main_menu_block .main_menu-documents_block .organizations.active, 
+main .main_menu .main_menu_block .main_menu-documents_block .items.active {
+    color:white;
+}
+
+.main_menu_block .main_menu-documents_block .main_menu-documents.individuals span::before {
+    background:url(img/individuals.png) no-repeat;
+    background-size:contain;
+    filter:brightness(0.5);
+}
+
+.main_menu_block .main_menu-documents_block .main_menu-documents.organizations span::before {
+    background:url(img/organizations.png) no-repeat;
+    background-size:contain;
+    filter:brightness(0.5);
+}
+
+.main_menu_block .main_menu-documents_block .main_menu-documents.items span::before {
+    background:url(img/items.png) no-repeat;
+    background-size:contain;
+    filter:brightness(0.5);
+}
+
+main .main_burger span::before{
+    content:'';
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:2px;
+    background-color:rgb(240,240,240);
+    transition:1s;
+}
+
+main .main_burger.active span::before{
+    transform: rotate(45deg);
+    transform-origin:center;
+    top:12.5px;
+}
+
+
+
+main .main_burger span::after{
+    content:'';
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:2px;
+    background-color:rgb(240,240,240);
+    transition:1s;
+}
+
+main .main_burger.active span::after{
+    transform: rotate(-45deg);
+    transform-origin:center;
+    bottom:11px;
+}
+
+main .menu_burger.active .main_burger-content{
+    display: none;
+}
+
+/*-------------------------------------------------->
+<!-------------------------------------------------->
+<!----------------Боковое меню сайта: контент------->
+<!-------------------------------------------------->
+<!--------------------------------------------------*/
+main .main_menu_block{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+    margin-top:60px;
+    transition:1s;
+    opacity: 0;
+}
+
+main .main_menu .main_menu_block .main_title{
+    font-size:30px;
+    line-height: 20px;
+    font-weight:600;
+    color:rgb(240,240,240);
+    margin-bottom:30px;
+}
+
+main .main_menu .main_menu_block .main_menu-documents, .main_menu-guides{
+    width:100%;
+    text-align:left;
+    font-size:20px;
+    line-height: 40px;
+    letter-spacing: 3px;
+    font-weight:700;
+    color:gray;
+    background-color:#0e1f27;
+    border-top:1px solid rgba(240,240,240,0.3);
+    border-bottom:1px solid rgba(240,240,240,0.3);
+}
+
+main .main_menu .main_menu_block .main_menu-documents.active, .main_menu-guides.active{
+    color:white;
+}
+
+main .main_menu .main_menu_block .main_menu-documents:hover, .main_menu-guides:hover{
+    cursor:pointer;
+    color:rgb(240,240,240);
+}
+
+main .main_menu .main_menu_block .main_menu-documents span, .main_menu-guides span{
+    position:relative;
+    margin-left:calc(50% - 65px);
+}
+
+main .main_menu .main_menu_block .main_menu-documents span::before{
+    content:'';
+    position:absolute;
+    margin-left:-30px;
+    top:calc(50% - 10px);
+    width:20px;
+    height:20px;
+    background:url(img/main_menu-documents.png) no-repeat;
+    background-size:contain;
+    filter:brightness(0.5);
+}
+
+main .main_menu .main_menu_block .main_menu-guides span::before{
+    content:'';
+    position:absolute;
+    margin-left:-30px;
+    top:calc(50% - 10px);
+    width:20px;
+    height:20px;
+    background:url(img/main_menu-guides.png) no-repeat;
+    background-size:contain;
+    filter:brightness(0.5);
+}
+
+main .main_menu .main_menu_block .main_menu-guides_block{
+    width:100%;
+}
+
+main .main_menu .main_menu_block .main_menu-guides_block .individuals, .organizations, .items{
+    background-color:#0e1f27;
+}
+
+main .main_menu .main_menu_block .main_menu-guides_block .individuals.active, .organizations.active, .items.active{
+    color:white;
+}
+
+.main_menu_block .main_menu-guides_block .main_menu-guides.individuals span::before{
+    background:url(img/individuals.png) no-repeat;
+    background-size:contain;
+    filter:brightness(0.5);
+}
+
+.main_menu_block .main_menu-guides_block .main_menu-guides.organizations span::before{
+    background:url(img/organizations.png) no-repeat;
+    background-size:contain;
+    filter:brightness(0.5);
+}
+
+.main_menu_block .main_menu-guides_block .main_menu-guides.items span::before{
+    background:url(img/items.png) no-repeat;
+    background-size:contain;
+    filter:brightness(0.5);
+}
+
+/*--------------------------------------------------->
+<!--------------------------------------------------->
+<!----------------Основной блок сайта---------------->
+<!--------------------------------------------------->
+<!---------------------------------------------------*/
+main .main_content_block{
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;
+    position:absolute;
+    right:0;
+    top:0;
+    width:95%;
+    height:100%;
+    transition:1s;
+}
+
+/*-----------Общие для секций свойства-----------*/
+main .main_content_block .table_row_delete{
+    background:url('img/delete.png') no-repeat;
+    width:50%;
+    background-size:50%;
+    background-position: center;
+    border:0 !important;
+    cursor: pointer;
+}
+
+main .main_content_block .table_row_delete:active{
+    background-size:60%;  
+}
+
+main .main_content_block .table_row_change{
+    background:url('img/change.png') no-repeat;
+    width:50%;
+    background-size:55%;
+    background-position: center;
+    cursor: pointer;
+}
+
+main .main_content_block .table_row_change:active{
+    background-size:65%;  
+}
+
+main .main_content_block .table_row_print{
+    background:url('img/print.png') no-repeat;
+    width:50%;
+    background-size:55%;
+    background-position: center;
+    cursor: pointer;
+}
+
+main .main_content_block .table_row_print:active{
+    background-size:65%;  
+}
+
+main .main_content_block .section_table_add{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:50px;
+    width:200px;
+    height:50px;
+    font-size:20px;
+    font-weight:900;
+    color:rgb(240,240,240);
+    border-radius:30px;
+    background-color:rgb(0,18,18);
+    cursor:pointer;
+}
+
+main .main_content_block .section_table_add:hover{
+    background-color:rgb(0,28,28);
+}
+
+main .main_content_block .section_table_add:active{
+    background-color:rgb(0,8,8);
+}
+
+main .main_content_block .section_table{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:auto;  
+}
+
+main .main_content_block .section_table div{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+main .main_content_block .section.documents, main .main_content_block .section.individuals, main .main_content_block .section.organizations, main .main_content_block .section.items{
+    display:none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top:50px;
+    width:auto;
+    min-height:150px;
+}
+
+main .main_content_block .section.documents.active, .main_content_block .section.individuals.active, .main_content_block .section.organizations.active, .main_content_block .section.items.active{
+    display:flex;
+}
+
+main .main_content_block .section.documents .section_caption, .section.individuals .section_caption, .section.organizations .section_caption,  .section.items .section_caption{
+    width:auto;
+    font-size:35px;
+    line-height: 35px;
+    font-weight: 900;
+    color:rgb(240,240,240);
+    margin-bottom:50px;
+}
+
+main .main_content_block .section_table .table_row div{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width:210px;
+    height:75px;
+    border-right:2px solid rgb(100,100,100);
+    color:rgb(240,240,240);
+    font-size:15px;
+    font-weight: 900;
+    background-color:rgb(28,28,28); 
+}
+
+main .main_content_block .section_table .table_row.th div{
+    height:50px;
+    border-bottom:1px solid rgb(100,100,100);
+    background-color:rgb(0,18,18);
+    font-size:20px;
+    font-weight: 900; 
+}
+
+main .main_content_block .section_table .table_row.th div:first-child{
+    border-radius:20px 0 0;
+}
+
+main .main_content_block .section_table .table_row.th div:last-child{
+    border-radius:0 20px 0 0;
+}
+
+main .main_content_block .section_table .table_row div:first-child{
+    width:75px;
+}
+
+main .main_content_block .section_table .table_row div:last-child{
+    border-right:none;
+    width:75px;
+}
+
+main .main_content_block .section_table .table_row div:first-child{
+    width:75px;
+}
+
+/*-----------Раздел Документы-----------*/
+main .main_content_block .section.documents .section_table .table_row>div:nth-child(2){
+    width:300px;
+}
+
+main .main_content_block .section.documents .section_table .table_row>div:nth-child(3){
+    display:flex;
+    flex-direction: row;
+    width:300px;
+}
+
+main .main_content_block .section.documents .section_table .table_row>div:nth-child(3) div{
+    display:flex;
+    flex-direction: row;
+    width:100%;
+    height:auto;
+    height:100%;
+}
+
+main .main_content_block .section.documents .section_table [class="table_row th"]>div:nth-child(3) {
+    display:flex;
+    flex-direction: column;
+    height:auto;
+}
+
+main .main_content_block .section.documents .section_table .table_row>div:last-child {
+    width:112.5px;
+}
+
+main .main_content_block .section.documents .section_table .table_row>div:last-child div{
+    width:33%;
+}
+ 
+/*-----------Раздел Ведомости-----------*/
+main .main_content_block .section.vedomost {
+    display:none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top:50px;
+    width:auto;
+    min-height:150px;
+}
+
+main .main_content_block .section.vedomost.active {
+    display:flex;
+}
+
+main .main_content_block .section.vedomost .section_caption {
+    width:auto;
+    font-size:35px;
+    line-height: 35px;
+    font-weight: 900;
+    color:rgb(240,240,240);
+    margin-bottom:50px;
+}
+
+main .main_content_block .section.vedomost .section_table .table_row div {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width:210px;
+    height:75px;
+    border-right:2px solid rgb(100,100,100);
+    color:rgb(240,240,240);
+    font-size:15px;
+    font-weight: 900;
+    background-color:rgb(28,28,28);
+}
+
+main .main_content_block .section.vedomost .section_table .table_row.th div {
+    height:50px;
+    border-bottom:1px solid rgb(100,100,100);
+    background-color:rgb(0,18,18);
+    font-size:20px;
+    font-weight: 900;
+}
+
+main .main_content_block .section.vedomost .section_table .table_row.th div:first-child {
+    border-radius:20px 0 0;
+}
+
+main .main_content_block .section.vedomost .section_table .table_row.th div:last-child {
+    border-radius:0 20px 0 0;
+}
+
+main .main_content_block .section.vedomost .section_table .table_row div:first-child {
+    width:75px;
+}
+
+main .main_content_block .section.vedomost .section_table .table_row div:last-child {
+    border-right:none;
+    width:75px;
+}
+
+main .main_content_block .section.vedomost .section_table .table_row>div:nth-child(2) {
+    width:300px;
+}
+
+main .main_content_block .section.vedomost .section_table .table_row>div:nth-child(3) {
+    width:300px;
+}
+
+main .main_content_block .section.vedomost .section_table .table_row>div:last-child {
+    width:112.5px;
+}
+
+main .main_content_block .section.vedomost .section_table .table_row>div:last-child div {
+    width:33%;
+}
+
+/*-----------Форма добавление/обновления в секцию "Ведомость на выдачу продукции"-----------*/
+#frame_ved {
+    display:none;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    top:50px;
+    left:calc(50% - 300px);
+    width:600px;
+    padding-top:50px;
+    padding-bottom:50px;
+    height:fit-content;
+    background-color:rgb(0,28,28);
+    border-radius:20px;
+}
+
+#frame_ved .frame_ved_exit {
+    position: absolute;
+    width:25px;
+    height:25px;
+    right:25px;
+    color:white;
+    top:25px;
+    z-index:100;
+    cursor:pointer;
+}
+
+#frame_ved .frame_ved_exit span::before {
+    content: '';
+    position:absolute;
+    width:35px;
+    height:2px;
+    top:0;
+    transform-origin: left;
+    transform: rotate(45deg);
+    background-color:white;
+}
+
+#frame_ved .frame_ved_exit span::after {
+    content: '';
+    position:absolute;
+    width:33px;
+    height:2px;
+    bottom:0;
+    transform-origin: left;
+    transform: rotate(-45deg);
+    background-color:white;
+}
+
+#frame_ved .frame_ved_cont {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:550px;
+    height:90%; 
+}
+
+#frame_ved .frame_ved_cont .frame_title {
+    font-size:30px;
+    font-weight: 600;
+    color:rgba(240,240,240,0.9);
+    text-align:center;
+}
+
+#frame_ved .frame_ved_cont .ved_enter_data_field {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:550px;
+    height:85%; 
+    color:rgb(240,240,240);
+}
+
+#frame_ved .frame_ved_cont .ved_enter_data_field input, select {
+    width:450px;
+    height:30px;
+    margin:5px 0;
+    margin-left: 5px;
+    background-color:rgb(0,18,18);
+    border:0;
+    text-align:center;
+    color:rgb(240,240,240);
+    font-weight:600;
+    font-size:15px;
+    border-top:2px solid rgba(255,255,255,0.1);
+    border-bottom:2px solid rgba(255,255,255,0.1);
+}
+
+#frame_ved .frame_ved_cont .ved_enter_data_field div {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width:450px;
+}
+
+#frame_ved .frame_ved_cont .ved_enter_data_field div > input,select {
+    width:95%;
+}
+
+#frame_ved .frame_ved_cont .ved_enter_data_field > select {
+    width:450px;
+}
+
+#frame_ved .frame_ved_cont .ved_enter_data_field table {
+    align-items: center;
+    width:450px;
+    height:30px;
+    border-collapse:collapse;
+    margin-bottom:20px;
+    margin-top:20px;
+    color:rgb(240,240,240);
+    background-color:rgb(53, 53, 53);
+}
+
+#frame_ved .frame_ved_cont .ved_enter_data_field table tr input {
+    width:100%;
+    height:100%;
+    margin:0;
+}
+
+#frame_ved .frame_ved_cont .ved_enter_data_field div button {
+    width:25%;
+    height:25px;
+    background-color:rgb(53, 53, 53);
+    margin-bottom:25px;
+    font-size:15px;
+    font-weight: 700;
+    color:rgb(240,240,240);
+    border:1px solid black;
+}
+
+#frame_ved .frame_ved_cont .ved_enter_data_field div button:active {
+    background-color:rgb(43, 43, 43);
+}
+
+#frame_ved .frame_ved_cont .confirm_but {
+    padding-top: 15px;
+    text-align:center;
+    width:150px;
+    height:40px; 
+    cursor:pointer;
+    margin-top: 5px;
+    background-color:rgb(0,18,18);
+    color:rgba(240,240,240,0.9);
+    font-weight:600;
+    border-top:2px solid rgba(255,255,255,0.1);
+    border-bottom:2px solid rgba(255,255,255,0.1);
+}
+
+#frame_ved .frame_ved_cont .confirm_but:active {
+    background-color:rgb(0,8,8);
+}
+
+/*-----------Раздел Организации-----------*/
+main .main_content_block .section.organizations{
+    background-color:rgb(10,10,10);
+}
+
+main .main_content_block .section.organizations .section_table .table_row>div:nth-child(2){
+    width:500px;
+}
+
+main .main_content_block .section.organizations .section_table .table_row div:nth-child(3){
+    width:500px;
+}
+
+/*-----------Раздел Товары-----------*/
+/*-----------Раздел Товары-----------*/
+main .main_content_block .section.items{
+    background-color:rgb(10,10,10);
+}
+
+main .main_content_block .section.items .section_table .table_row>div:nth-child(2){
+    width:800px;
+}
+
+/* Общие стили для заголовков таблиц */
+main .main_content_block .section_table .table_row.th div{
+    height:50px;
+    border-bottom:1px solid rgb(100,100,100);
+    background-color:rgb(0,18,18);
+    font-size:20px;
+    font-weight: 900; 
+}
+
+main .main_content_block .section_table .table_row.th div:first-child{
+    border-radius:20px 0 0;
+}
+
+main .main_content_block .section_table .table_row.th div:last-child{
+    border-radius:0 20px 0 0;
+}
+
+
+/*-----------------------------------------------------------------------------------------------------*/ 
+/*-----------------------------------------------------------------------------------------------------*/  
+/*-----------------------------------------------ФОРМЫ-------------------------------------------------*/  
+/*-----------------------------------------------------------------------------------------------------*/  
+/*-----------------------------------------------------------------------------------------------------*/ 
+
+/*-----------Форма добавление/обновления в секцию "Документы"-----------*/
+#frame_doc{
+    display:none;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    top:50px;
+    left:calc(50% - 300px);
+    width:600px;
+    padding-top:50px;
+    padding-bottom:50px;
+    height:fit-content;
+    background-color:rgb(0,28,28);
+    border-radius:20px;
+}
+
+#frame_doc .frame_doc_exit{ /*Крестик*/
+    position: absolute;
+    width:25px;
+    height:25px;
+    right:25px;
+    color:white;
+    top:25px;
+    z-index:100;
+    cursor:pointer;
+}
+
+#frame_doc .frame_doc_exit span::before{ /*Палочка крестика*/
+    content: '';
+    position:absolute;
+    width:35px;
+    height:2px;
+    top:0;
+    transform-origin: left;
+    transform: rotate(45deg);
+    background-color:white;
+}
+
+#frame_doc .frame_doc_exit span::after{ /*Палочка крестика*/
+    content: '';
+    position:absolute;
+    width:33px;
+    height:2px;
+    bottom:0;
+    transform-origin: left;
+    transform: rotate(-45deg);
+    background-color:white;
+}
+
+#frame_doc .frame_doc_cont{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:550px;
+    height:90%; 
+}
+
+#frame_doc .frame_doc_cont .frame_title{
+    font-size:30px;
+    font-weight: 600;
+    color:rgba(240,240,240,0.9);
+    text-align:center;
+}
+
+#frame_doc .frame_doc_cont .enter_data_field{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:550px;
+    height:85%; 
+    color:rgb(240,240,240);
+}
+
+#frame_doc .frame_doc_cont .enter_data_field input, select{
+    width:450px;
+    height:30px;
+    margin:5px 0;
+    margin-left: 5px;
+    background-color:rgb(0,18,18);
+    border:0;
+    text-align:center;
+    color:rgb(240,240,240);
+    font-weight:600;
+    font-size:15px;
+    border-top:2px solid rgba(255,255,255,0.1);
+    border-bottom:2px solid rgba(255,255,255,0.1);
+}
+
+#frame_doc .frame_doc_cont .enter_data_field div{
+   display:flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   width:450px;
+}
+
+#frame_doc .frame_doc_cont .enter_data_field div > input,select{
+    width:95%;
+ }
+
+ #frame_doc .frame_doc_cont .enter_data_field > select{
+    width:450px;
+ }
+
+#frame_doc .frame_doc_cont .enter_data_field table{
+    align-items: center;
+    width:450px;
+    height:30px;
+    border-collapse:collapse;
+    margin-bottom:20px;
+    margin-top:20px;
+    color:rgb(240,240,240);
+    background-color:rgb(53, 53, 53);
+}
+
+#frame_doc .frame_doc_cont .enter_data_field table tr input{
+    width:100%;
+    height:100%;
+    margin:0;
+}
+
+#frame_doc .frame_doc_cont .enter_data_field div button{
+    width:25%;
+    height:25px;
+    background-color:rgb(53, 53, 53);
+    margin-bottom:25px;
+    font-size:15px;
+    font-weight: 700;
+    color:rgb(240,240,240);
+    border:1px solid black;
+}
+
+#frame_doc .frame_doc_cont .enter_data_field div button:active{
+    background-color:rgb(43, 43, 43);
+}
+
+
+#frame_doc .frame_doc_cont .confirm_but{
+    padding-top: 15px;
+    text-align:center;
+    width:150px;
+    height:40px; 
+    cursor:pointer;
+    margin-top: 5px;
+    background-color:rgb(0,18,18);
+    color:rgba(240,240,240,0.9);
+    font-weight:600;
+    border-top:2px solid rgba(255,255,255,0.1);
+    border-bottom:2px solid rgba(255,255,255,0.1);
+}
+
+#frame_doc .frame_doc_cont .confirm_but:active{
+    background-color:rgb(0,8,8);
+}
+
+/*-----------Форма добавление/обновления в секцию "Физические лица"-----------*/
+#frame_indiv{
+    display:none;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    top:200px;
+    left:calc(50% - 300px);
+    width:600px;
+    height:400px;
+    background-color:rgb(0,28,28);
+    border-radius:20px;
+}
+
+#frame_indiv .frame_indiv_exit{ /*Крестик*/
+    position: absolute;
+    width:25px;
+    height:25px;
+    right:25px;
+    color:white;
+    top:25px;
+    z-index:100;
+    cursor:pointer;
+}
+
+#frame_indiv .frame_indiv_exit span::before{ /*Палочка крестика*/
+    content: '';
+    position:absolute;
+    width:35px;
+    height:2px;
+    top:0;
+    transform-origin: left;
+    transform: rotate(45deg);
+    background-color:white;
+}
+
+#frame_indiv .frame_indiv_exit span::after{ /*Палочка крестика*/
+    content: '';
+    position:absolute;
+    width:33px;
+    height:2px;
+    bottom:0;
+    transform-origin: left;
+    transform: rotate(-45deg);
+    background-color:white;
+}
+
+#frame_indiv .frame_indiv_cont{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:550px;
+    height:350px; 
+}
+
+#frame_indiv .frame_indiv_cont .frame_title{
+    font-size:30px;
+    font-weight: 600;
+    color:rgba(240,240,240,0.9);
+    
+}
+
+#frame_indiv .frame_indiv_cont .enter_data_field{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:550px;
+    height:250px; 
+}
+
+#frame_indiv .frame_indiv_cont .enter_data_field input{
+    width:450px;
+    height:30px;
+    margin:5px 0;
+    background-color:rgb(0,18,18);
+    border:0;
+    text-align:center;
+    color:rgb(240,240,240);
+    font-weight:600;
+    font-size:15px;
+    border-top:2px solid rgba(255,255,255,0.1);
+    border-bottom:2px solid rgba(255,255,255,0.1);
+}
+
+#frame_indiv .frame_indiv_cont .confirm_but{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:150px;
+    height:40px; 
+    cursor:pointer;
+    margin-top: 5px;
+    background-color:rgb(0,18,18);
+    color:rgba(240,240,240,0.9);
+    font-weight:600;
+    border-top:2px solid rgba(255,255,255,0.1);
+    border-bottom:2px solid rgba(255,255,255,0.1);
+}
+
+#frame_indiv .frame_indiv_cont .confirm_but:active{
+    background-color:rgb(0,8,8);
+}
+
+/*-----------Форма добавление/обновления в секцию "Организации"-----------*/
+#frame_org{
+    display:none;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    top:200px;
+    left:calc(50% - 300px);
+    width:600px;
+    height:250px;
+    background-color:rgb(0,28,28);
+    border-radius:20px;
+}
+
+#frame_org .frame_org_exit{ /*Крестик*/
+    position: absolute;
+    width:25px;
+    height:25px;
+    right:25px;
+    color:white;
+    top:25px;
+    z-index:100;
+    cursor:pointer;
+}
+
+#frame_org .frame_org_exit span::before{ /*Палочка крестика*/
+    content: '';
+    position:absolute;
+    width:35px;
+    height:2px;
+    top:0;
+    transform-origin: left;
+    transform: rotate(45deg);
+    background-color:white;
+}
+
+#frame_org .frame_org_exit span::after{ /*Палочка крестика*/
+    content: '';
+    position:absolute;
+    width:33px;
+    height:2px;
+    bottom:0;
+    transform-origin: left;
+    transform: rotate(-45deg);
+    background-color:white;
+}
+
+#frame_org .frame_org_cont{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:550px;
+    height:200px; 
+}
+
+#frame_org .frame_org_cont .frame_title{
+    font-size:30px;
+    font-weight: 600;
+    color:rgba(240,240,240,0.9);
+    
+}
+
+#frame_org .frame_org_cont .enter_data_field{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:550px;
+    height:100px; 
+}
+
+#frame_org .frame_org_cont .enter_data_field input{
+    width:450px;
+    height:30px;
+    margin:5px 0;
+    background-color:rgb(0,18,18);
+    border:0;
+    text-align:center;
+    color:rgb(240,240,240);
+    font-weight:600;
+    font-size:15px;
+    border-top:2px solid rgba(255,255,255,0.1);
+    border-bottom:2px solid rgba(255,255,255,0.1);
+}
+
+#frame_org .frame_org_cont .confirm_but{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:150px;
+    height:40px; 
+    cursor:pointer;
+    margin-top: 5px;
+    background-color:rgb(0,18,18);
+    color:rgba(240,240,240,0.9);
+    font-weight:600;
+    border-top:2px solid rgba(255,255,255,0.1);
+    border-bottom:2px solid rgba(255,255,255,0.1);
+}
+
+#frame_org .frame_org_cont .confirm_but:active{
+    background-color:rgb(0,8,8);
+}
+
+/*-----------Форма добавление/обновления товаров в секцию "Товары"-----------*/
+#frame_items{
+    display:none;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    top:200px;
+    left:calc(50% - 300px);
+    width:600px;
+    height:200px;
+    background-color:rgb(0,28,28);
+    border-radius:20px;
+}
+
+#frame_items .frame_items_exit{ /*Крестик*/
+    position: absolute;
+    width:25px;
+    height:25px;
+    right:25px;
+    color:white;
+    top:25px;
+    z-index:100;
+    cursor:pointer;
+}
+
+#frame_items .frame_items_exit span::before{ /*Палочка крестика*/
+    content: '';
+    position:absolute;
+    width:35px;
+    height:2px;
+    top:0;
+    transform-origin: left;
+    transform: rotate(45deg);
+    background-color:white;
+}
+
+#frame_items .frame_items_exit span::after{ /*Палочка крестика*/
+    content: '';
+    position:absolute;
+    width:33px;
+    height:2px;
+    bottom:0;
+    transform-origin: left;
+    transform: rotate(-45deg);
+    background-color:white;
+}
+
+#frame_items .frame_items_cont{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:550px;
+    height:200px; 
+}
+
+#frame_items .frame_items_cont .frame_title{
+    font-size:30px;
+    font-weight: 600;
+    color:rgba(240,240,240,0.9);
+    
+}
+
+#frame_items .frame_items_cont .enter_data_field{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:550px;
+    height:70px; 
+}
+
+#frame_items .frame_items_cont .enter_data_field input{
+    width:450px;
+    height:30px;
+    margin:5px 0;
+    background-color:rgb(0,18,18);
+    border:0;
+    text-align:center;
+    color:rgb(240,240,240);
+    font-weight:600;
+    font-size:15px;
+    border-top:2px solid rgba(255,255,255,0.1);
+    border-bottom:2px solid rgba(255,255,255,0.1);
+}
+
+#frame_items .frame_items_cont .confirm_but{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:150px;
+    height:40px; 
+    cursor:pointer;
+    margin-top: 5px;
+    background-color:rgb(0,18,18);
+    color:rgba(240,240,240,0.9);
+    font-weight:600;
+    border-top:2px solid rgba(255,255,255,0.1);
+    border-bottom:2px solid rgba(255,255,255,0.1);
+}
+
+#frame_items .frame_items_cont .confirm_but:active{
+    background-color:rgb(0,8,8);
+}
+
+
+#frame_print {
+    display: none; /* Полностью скрываем форму */
+    position: absolute;
+    width: 570px;
+    height: auto;
+    font-weight: 600;
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#frame_print .issue_organ  {
+    margin-top: 20px; /* Отступ сверху */
+    font-size: 12px;
+}
+
+#frame_print .get_from  {
+    margin-top: 20px; /* Отступ сверху */
+    font-size: 12px;
+}
+
+#frame_print .issue_organ input {
+    width: 100%; /* Занимает всю ширину блока */
+    border: 0;
+    border-bottom: 1px solid black;
+    text-align: left; /* Выравнивание текста по левому краю */
+    white-space: normal; /* Разрешаем перенос текста */
+    overflow-wrap: break-word; /* Разрешаем перенос длинных слов */
+}
+
+#frame_print .get_from input {
+    width: 100%; /* Занимает всю ширину блока */
+    border: 0;
+    border-bottom: 1px solid black;
+    text-align: left; /* Выравнивание текста по левому краю */
+    white-space: normal; /* Разрешаем перенос текста */
+    overflow-wrap: break-word; /* Разрешаем перенос длинных слов */
+}
+
+/* Общий стиль для input */
+#frame_print input {
+    text-align: center;
+    font-size: 12px;
+}
+
+/* Заголовок */
+#frame_print .block_hl {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    margin-bottom: 20px; /* Увеличенный отступ */
+}
+
+#frame_print .header_label {
+    text-align: right;
+    font-size: 12px;
+    line-height: 12px;
+}
+
+/*----------- Блок с организацией и кодами -----------*/
+#frame_print .level1 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    margin-top: 30px; /* Увеличенный отступ */
+    justify-content: space-between;
+}
+
+#frame_print .level1 .home_org {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#frame_print .level1 .home_org p {
+    font-size: 12px;
+    margin: 0;
+}
+
+#frame_print .level1 .home_org input {
+    width: 100%;
+    font-size: 12px;
+    border: 0;
+    border-bottom: 1px solid black;
+}
+
+#frame_print .level1 .codes {
+    width: 35%;
+    border: 1px solid black; /* Рамка для ОКПО и ОКУД */
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#frame_print .level1 .codes .grid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 5px; /* Расстояние между строками */
+}
+
+#frame_print .level1 .codes .cell1, 
+#frame_print .level1 .codes .cell2, 
+#frame_print .level1 .codes .cell3, 
+#frame_print .level1 .codes .cell4, 
+#frame_print .level1 .codes .cell5, 
+#frame_print .level1 .codes .cell6 {
+    font-size: 12px;
+}
+
+/*----------- Заголовок документа -----------*/
+#frame_print .title_num {
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 20px; /* Увеличенный отступ */
+}
+
+#frame_print .title_num input {
+    font-family: Times New Roman;
+    width: fit-content;
+    max-width: 15%;
+    border: 0;
+    border-bottom: 1px solid black;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/*----------- Даты выдачи -----------*/
+#frame_print .issue_with, #frame_print .issue_for {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    width: 100%;
+    height: 20px;
+    font-size: 12px;
+    margin-top: 20px; /* Увеличенный отступ */
+}
+
+#frame_print .issue_with .data_issue, #frame_print .issue_for .data_issue {
+    width: 50%;
+    display: flex;
+    align-items: flex-end;
+}
+
+#frame_print .data_issue input {
+    border: 0;
+    border-bottom: 1px solid black;
+}
+
+#frame_print .data_issue .day {
+    width: 10%;
+}
+
+#frame_print .data_issue .month {
+    width: 60%;
+    margin: 0 15px;
+}
+
+#frame_print .data_issue .year {
+    width: 30%;
+}
+
+/*----------- Организации -----------*/
+#frame_print .consumer_org, #frame_print .payer_org {
+    width: 100%;
+    height: auto;
+    font-size: 12px;
+    margin-top: 20px; /* Увеличенный отступ */
+}
+
+#frame_print .consumer_org input, #frame_print .payer_org input {
+    border: 0;
+    border-bottom: 1px solid black;
+    width: 100%;
+}
+
+/*----------- Физическое лицо -----------*/
+#frame_print .individuals_person {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin-top: 20px; /* Увеличенный отступ */
+    font-size: 12px;
+    width: 100%;
+}
+
+#frame_print .individuals_person .position {
+    width: 30%;
+}
+
+#frame_print .individuals_person .position_inputs_block {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.individuals_person .position_input, .individuals_person .fio_input {
+    width: 50%;
+}
+
+.individuals_person .position_inputs_block input {
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid black;
+}
+
+/*----------- Паспортные данные -----------*/
+#frame_print .passport {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    font-size: 12px;
+    margin-top: 20px; /* Увеличенный отступ */
+}
+
+#frame_print .passport .data {
+    display: flex;
+    width: 100%;
+}
+
+#frame_print .passport .serial, #frame_print .passport .number {
+    width: 50%;
+}
+
+#frame_print .passport input {
+    border: 0;
+    border-bottom: 1px solid black;
+}
+
+/*----------- Таблица -----------*/
+#frame_print table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    margin-top: 30px;
+}
+
+#frame_print table th, #frame_print table td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+/*--------------------------!!! НАСТРОЙКИ ПЕЧАТИ !!!--------------------------*/
+@media print {
+    /* Показываем только форму печати */
+    #frame_print {
+        display: block !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        background: white;
+    }
+
+    /* Скрываем всё, кроме формы */
+    body * {
+        visibility: hidden;
+    }
+
+    #frame_print, #frame_print * {
+        visibility: visible;
+    }
+
+    /* Запрещаем разрывы таблицы */
+    #frame_print table {
+        page-break-inside: avoid;
+    }
+    
+    /* Скрываем ненужные элементы */
+    .no-print, .header, .footer, .menu, .buttons {
+        display: none !important;
+    }
+}
+
+
+/* Общие стили для всех секций */
+main .main_content_block .section {
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 50px;
+    width: auto;
+    min-height: 150px;
+}
+
+main .main_content_block .section.active {
+    display: flex;
+}
+
+/* Стили для заголовков секций */
+main .main_content_block .section .section_caption {
+    width: auto;
+    font-size: 35px;
+    line-height: 35px;
+    font-weight: 900;
+    color: rgb(240, 240, 240);
+    margin-bottom: 50px;
+}
+
+/* Стили для таблиц во всех секциях */
+main .main_content_block .section_table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+main .main_content_block .section_table div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Стили для строк таблицы */
+main .main_content_block .section_table .table_row div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 210px;
+    height: 75px;
+    border-right: 2px solid rgb(100, 100, 100);
+    color: rgb(240, 240, 240);
+    font-size: 15px;
+    font-weight: 900;
+    background-color: rgb(28, 28, 28);
+}
+
+/* Стили для заголовков таблицы */
+main .main_content_block .section_table .table_row.th div {
+    height: 50px;
+    border-bottom: 1px solid rgb(100, 100, 100);
+    background-color: rgb(0, 18, 18);
+    font-size: 20px;
+    font-weight: 900;
+}
+
+/* Закругленные углы для первой и последней ячейки заголовка */
+main .main_content_block .section_table .table_row.th div:first-child {
+    border-radius: 20px 0 0;
+}
+
+main .main_content_block .section_table .table_row.th div:last-child {
+    border-radius: 0 20px 0 0;
+}
+
+/* Стили для первой и последней ячейки */
+main .main_content_block .section_table .table_row div:first-child {
+    width: 75px;
+}
+
+main .main_content_block .section_table .table_row div:last-child {
+    border-right: none;
+    width: 75px;
+}
+
+/* Специфичные стили для таблицы доверенности */
+main .main_content_block .section.documents .section_table .table_row>div:nth-child(2) {
+    width: 300px;
+}
+
+main .main_content_block .section.documents .section_table .table_row>div:nth-child(3) {
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+}
+
+main .main_content_block .section.documents .section_table .table_row>div:nth-child(3) div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+main .main_content_block .section.documents .section_table [class="table_row th"]>div:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+main .main_content_block .section.documents .section_table .table_row>div:last-child {
+    width: 112.5px;
+}
+
+main .main_content_block .section.documents .section_table .table_row>div:last-child div {
+    width: 33%;
+}
+
+/* Специфичные стили для таблицы ведомости */
+main .main_content_block .section.vedomost .section_table .table_row>div:nth-child(2) {
+    width: 300px;
+}
+
+main .main_content_block .section.vedomost .section_table .table_row>div:nth-child(3) {
+    width: 300px;
+}
+
+main .main_content_block .section.vedomost .section_table .table_row>div:last-child {
+    width: 112.5px;
+}
+
+main .main_content_block .section.vedomost .section_table .table_row>div:last-child div {
+    width: 33%;
+}
+
+/* Кнопка "Добавить запись" */
+main .main_content_block .section_table_add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 900;
+    color: rgb(240, 240, 240);
+    border-radius: 30px;
+    background-color: rgb(0, 18, 18);
+    cursor: pointer;
+}
+
+main .main_content_block .section_table_add:hover {
+    background-color: rgb(0, 28, 28);
+}
+
+main .main_content_block .section_table_add:active {
+    background-color: rgb(0, 8, 8);
+}
+
+
+
+
+/* Стили для таблицы ведомостей */
+.section.vedomost .section_table .table_row > div:nth-child(1) {
+    width: 50px;
+}
+
+.section.vedomost .section_table .table_row > div:nth-child(2) {
+    width: 200px;
+}
+
+.section.vedomost .section_table .table_row > div:nth-child(3) {
+    width: 150px;
+}
+
+.section.vedomost .section_table .table_row > div:nth-child(4) {
+    width: 100px;
+}
+
+.section.vedomost .section_table .table_row > div:nth-child(4) > div {
+    width: 33.3%;
+    height: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Стили для формы печати ведомости */
+#frame_print_ved {
+    display: none;
+    position: absolute;
+    width: 800px;
+    height: auto;
+    font-weight: 600;
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', serif;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+#frame_print_ved .block_hl {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+}
+
+#frame_print_ved .header_label {
+    text-align: right;
+    font-size: 12px;
+    line-height: 1.2;
+}
+
+#frame_print_ved .signature_block {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#frame_print_ved .signature_lines {
+    display: flex;
+    gap: 20px;
+    margin-top: 5px;
+}
+
+#frame_print_ved .signature_date {
+    margin-top: 5px;
+}
+
+#frame_print_ved .ved_title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 20px 0;
+    text-transform: uppercase;
+}
+
+#frame_print_ved .ved_title input {
+    border: none;
+    border-bottom: 1px solid black;
+    width: 100px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#frame_print_ved .ved_subtitle {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#frame_print_ved .ved_codes {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#frame_print_ved .ved_org_info {
+    margin-bottom: 20px;
+}
+
+#frame_print_ved .ved_org_info div {
+    margin-bottom: 10px;
+}
+
+#frame_print_ved .ved_org_info p {
+    margin-bottom: 5px;
+}
+
+#frame_print_ved .ved_org_info input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+#frame_print_ved table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#frame_print_ved table th, 
+#frame_print_ved table td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+}
+
+#frame_print_ved .ved_total {
+    margin-bottom: 30px;
+}
+
+#frame_print_ved .ved_signatures {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+#frame_print_ved .ved_signatures > div {
+    width: 45%;
+}
+
+#frame_print_ved .ved_signatures .signature_block {
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+@media print {
+    #frame_print_ved {
+        display: block !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        background: white;
+    }
+
+    body * {
+        visibility: hidden;
+    }
+
+    #frame_print_ved, #frame_print_ved * {
+        visibility: visible;
+    }
+
+    #frame_print_ved table {
+        page-break-inside: avoid;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+/* Убираем большие отступы страницы */
+@page {
+    size: auto;
+    margin: 0;
+}
+
+
+
+/*-----------Раздел Приказы о переводе-----------*/
+main .main_content_block .section.prikaz {
+    display:none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top:50px;
+    width:auto;
+    min-height:150px;
+}
+
+main .main_content_block .section.prikaz.active {
+    display:flex;
+}
+
+main .main_content_block .section.prikaz .section_caption {
+    width:auto;
+    font-size:35px;
+    line-height: 35px;
+    font-weight: 900;
+    color:rgb(240,240,240);
+    margin-bottom:50px;
+}
+
+main .main_content_block .section.prikaz .section_table .table_row div {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width:210px;
+    height:75px;
+    border-right:2px solid rgb(100,100,100);
+    color:rgb(240,240,240);
+    font-size:15px;
+    font-weight: 900;
+    background-color:rgb(28,28,28);
+}
+
+main .main_content_block .section.prikaz .section_table .table_row.th div {
+    height:50px;
+    border-bottom:1px solid rgb(100,100,100);
+    background-color:rgb(0,18,18);
+    font-size:20px;
+    font-weight: 900;
+}
+
+main .main_content_block .section.prikaz .section_table .table_row.th div:first-child {
+    border-radius:20px 0 0;
+}
+
+main .main_content_block .section.prikaz .section_table .table_row.th div:last-child {
+    border-radius:0 20px 0 0;
+}
+
+main .main_content_block .section.prikaz .section_table .table_row div:first-child {
+    width:75px;
+}
+
+main .main_content_block .section.prikaz .section_table .table_row div:last-child {
+    border-right:none;
+    width:75px;
+}
+
+main .main_content_block .section.prikaz .section_table .table_row>div:nth-child(2) {
+    width:200px;
+}
+
+main .main_content_block .section.prikaz .section_table .table_row>div:nth-child(3) {
+    width:150px;
+}
+
+main .main_content_block .section.prikaz .section_table .table_row>div:nth-child(4) {
+    width:300px;
+}
+
+main .main_content_block .section.prikaz .section_table .table_row>div:last-child {
+    width:112.5px;
+}
+
+main .main_content_block .section.prikaz .section_table .table_row>div:last-child div {
+    width:33%;
+}
+
+/*-----------Форма добавление/обновления в секцию "Приказы о переводе"-----------*/
+#frame_prikaz {
+    display:none;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    top:50px;
+    left:calc(50% - 300px);
+    width:600px;
+    padding-top:50px;
+    padding-bottom:50px;
+    height:fit-content;
+    background-color:rgb(0,28,28);
+    border-radius:20px;
+}
+
+#frame_prikaz .frame_prikaz_exit {
+    position: absolute;
+    width:25px;
+    height:25px;
+    right:25px;
+    color:white;
+    top:25px;
+    z-index:100;
+    cursor:pointer;
+}
+
+#frame_prikaz .frame_prikaz_exit span::before {
+    content: '';
+    position:absolute;
+    width:35px;
+    height:2px;
+    top:0;
+    transform-origin: left;
+    transform: rotate(45deg);
+    background-color:white;
+}
+
+#frame_prikaz .frame_prikaz_exit span::after {
+    content: '';
+    position:absolute;
+    width:33px;
+    height:2px;
+    bottom:0;
+    transform-origin: left;
+    transform: rotate(-45deg);
+    background-color:white;
+}
+
+#frame_prikaz .frame_prikaz_cont {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:550px;
+    height:90%; 
+}
+
+#frame_prikaz .frame_prikaz_cont .frame_title {
+    font-size:30px;
+    font-weight: 600;
+    color:rgba(240,240,240,0.9);
+    text-align:center;
+}
+
+#frame_prikaz .frame_prikaz_cont .prikaz_enter_data_field {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:550px;
+    height:85%; 
+    color:rgb(240,240,240);
+}
+
+#frame_prikaz .frame_prikaz_cont .prikaz_enter_data_field input, select {
+    width:450px;
+    height:30px;
+    margin:5px 0;
+    margin-left: 5px;
+    background-color:rgb(0,18,18);
+    border:0;
+    text-align:center;
+    color:rgb(240,240,240);
+    font-weight:600;
+    font-size:15px;
+    border-top:2px solid rgba(255,255,255,0.1);
+    border-bottom:2px solid rgba(255,255,255,0.1);
+}
+
+#frame_prikaz .frame_prikaz_cont .prikaz_enter_data_field div {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width:450px;
+}
+
+#frame_prikaz .frame_prikaz_cont .prikaz_enter_data_field div > input,select {
+    width:95%;
+}
+
+#frame_prikaz .frame_prikaz_cont .prikaz_enter_data_field > select {
+    width:450px;
+}
+
+#frame_prikaz .frame_prikaz_cont .prikaz_enter_data_field table {
+    align-items: center;
+    width:450px;
+    height:30px;
+    border-collapse:collapse;
+    margin-bottom:20px;
+    margin-top:20px;
+    color:rgb(240,240,240);
+    background-color:rgb(53, 53, 53);
+}
+
+#frame_prikaz .frame_prikaz_cont .prikaz_enter_data_field table tr input {
+    width:100%;
+    height:100%;
+    margin:0;
+}
+
+#frame_prikaz .frame_prikaz_cont .prikaz_enter_data_field div button {
+    width:25%;
+    height:25px;
+    background-color:rgb(53, 53, 53);
+    margin-bottom:25px;
+    font-size:15px;
+    font-weight: 700;
+    color:rgb(240,240,240);
+    border:1px solid black;
+}
+
+#frame_prikaz .frame_prikaz_cont .prikaz_enter_data_field div button:active {
+    background-color:rgb(43, 43, 43);
+}
+
+#frame_prikaz .frame_prikaz_cont .confirm_but {
+    padding-top: 15px;
+    text-align:center;
+    width:150px;
+    height:40px; 
+    cursor:pointer;
+    margin-top: 5px;
+    background-color:rgb(0,18,18);
+    color:rgba(240,240,240,0.9);
+    font-weight:600;
+    border-top:2px solid rgba(255,255,255,0.1);
+    border-bottom:2px solid rgba(255,255,255,0.1);
+}
+
+#frame_prikaz .frame_prikaz_cont .confirm_but:active {
+    background-color:rgb(0,8,8);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------Раздел Заказы-----------*/
+main .main_content_block .section.order {
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 50px;
+    width: auto;
+    min-height: 150px;
+}
+
+main .main_content_block .section.order.active {
+    display: flex;
+}
+
+main .main_content_block .section.order .section_caption {
+    width: auto;
+    font-size: 35px;
+    line-height: 35px;
+    font-weight: 900;
+    color: rgb(240, 240, 240);
+    margin-bottom: 50px;
+}
+
+main .main_content_block .section.order .section_table .table_row div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 210px;
+    height: 75px;
+    border-right: 2px solid rgb(100, 100, 100);
+    color: rgb(240, 240, 240);
+    font-size: 15px;
+    font-weight: 900;
+    background-color: rgb(28, 28, 28);
+}
+
+main .main_content_block .section.order .section_table .table_row.th div {
+    height: 50px;
+    border-bottom: 1px solid rgb(100, 100, 100);
+    background-color: rgb(0, 18, 18);
+    font-size: 20px;
+    font-weight: 900;
+}
+
+main .main_content_block .section.order .section_table .table_row.th div:first-child {
+    border-radius: 20px 0 0;
+}
+
+main .main_content_block .section.order .section_table .table_row.th div:last-child {
+    border-radius: 0 20px 0 0;
+}
+
+main .main_content_block .section.order .section_table .table_row div:first-child {
+    width: 75px;
+}
+
+main .main_content_block .section.order .section_table .table_row div:last-child {
+    border-right: none;
+    width: 75px;
+}
+
+main .main_content_block .section.order .section_table .table_row>div:nth-child(2) {
+    width: 300px;
+}
+
+main .main_content_block .section.order .section_table .table_row>div:nth-child(3) {
+    width: 300px;
+}
+
+main .main_content_block .section.order .section_table .table_row>div:last-child {
+    width: 112.5px;
+}
+
+main .main_content_block .section.order .section_table .table_row>div:last-child div {
+    width: 33%;
+}
+
+/*-----------Форма добавление/обновления в секцию "Заказы"-----------*/
+#frame_order {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50px;
+    left: calc(50% - 500px);
+    width: 1050px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    height: fit-content;
+    background-color: rgb(0, 28, 28);
+    border-radius: 20px;
+}
+
+#frame_order .frame_order_exit {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: 25px;
+    color: white;
+    top: 25px;
+    z-index: 100;
+    cursor: pointer;
+}
+
+#frame_order .frame_order_exit span::before {
+    content: '';
+    position: absolute;
+    width: 35px;
+    height: 2px;
+    top: 0;
+    transform-origin: left;
+    transform: rotate(45deg);
+    background-color: white;
+}
+
+#frame_order .frame_order_exit span::after {
+    content: '';
+    position: absolute;
+    width: 33px;
+    height: 2px;
+    bottom: 0;
+    transform-origin: left;
+    transform: rotate(-45deg);
+    background-color: white;
+}
+
+#frame_order .frame_order_cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 550px;
+    height: 90%;
+}
+
+#frame_order .frame_order_cont .frame_title {
+    font-size: 30px;
+    font-weight: 600;
+    color: rgba(240, 240, 240, 0.9);
+    text-align: center;
+}
+
+#frame_order .frame_order_cont .order_enter_data_field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 550px;
+    height: 85%;
+    color: rgb(240, 240, 240);
+}
+
+#frame_order .frame_order_cont .order_enter_data_field input,
+#frame_order .frame_order_cont .order_enter_data_field select {
+    width: 330px;
+    height: 30px;
+    margin: 5px 0;
+    margin-left: 5px;
+    background-color: rgb(0, 18, 18);
+    border: 0;
+    text-align: center;
+    color: rgb(240, 240, 240);
+    font-weight: 600;
+    font-size: 15px;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+#frame_order .frame_order_cont .order_enter_data_field div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 345px;
+}
+
+#frame_order .frame_order_cont .order_enter_data_field div>input,
+#frame_order .frame_order_cont .order_enter_data_field div>select {
+    width: 95%;
+}
+
+#frame_order .frame_order_cont .order_enter_data_field table {
+    align-items: center;
+    width: 1030px;
+    height: 30px;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: rgb(240, 240, 240);
+    background-color: rgb(53, 53, 53);
+}
+
+#frame_order .frame_order_cont .order_enter_data_field table tr input {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+#frame_order .frame_order_cont .order_enter_data_field div button {
+    width: 25%;
+    height: 25px;
+    background-color: rgb(53, 53, 53);
+    margin-bottom: 25px;
+    font-size: 15px;
+    font-weight: 700;
+    color: rgb(240, 240, 240);
+    border: 1px solid black;
+}
+
+#frame_order .frame_order_cont .order_enter_data_field div button:active {
+    background-color: rgb(43, 43, 43);
+}
+
+#frame_order .frame_order_cont .confirm_but {
+    padding-top: 15px;
+    text-align: center;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    margin-top: 5px;
+    background-color: rgb(0, 18, 18);
+    color: rgba(240, 240, 240, 0.9);
+    font-weight: 600;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+#frame_order .frame_order_cont .confirm_but:active {
+    background-color: rgb(0, 8, 8);
+}
+
+
